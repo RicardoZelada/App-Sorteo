@@ -1,4 +1,7 @@
 
+    
+
+
 window.show__Errors = (error__List)=>{
     let error = document.querySelector(".div__alert");
     error.classList.add("mt-2");
@@ -16,19 +19,20 @@ window.show__Errors = (error__List)=>{
 
 window.register__List = []; /* Creo un array */
 
-const btn_Aux =  document.getElementById("btn__sortear");
+const btnAux__sortear =  document.getElementById("btn__sortear");
 
-btn_Aux.addEventListener('click', ()=>{
+btnAux__sortear.addEventListener('click', ()=>{
    let alert_Toast = document.querySelector(".div__alert");
    alert_Toast.innerHTML = "";
 
     let data__Number = document.getElementById("floatingInput").value;
+    
     console.log(data__Number);
-
+    
     error__List = []; /* Creo un array para agregar los errores */
 
     if (data__Number === ""){
-        error__List.push("Ingrese dato numerico");
+        error__List.push("Ingrese dato númerico");
     }
     if(error__List.length === 0){
         let register__List = {} /* Creo un objeto */
@@ -39,9 +43,6 @@ btn_Aux.addEventListener('click', ()=>{
         window.show__Errors(error__List);
     }
 
-    
-
-
-    console.log(error__List);
-    console.log(register__List);
+    //console.log(error__List);
+    //console.log(register__List);
 })

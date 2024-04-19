@@ -10,15 +10,14 @@
 
 </head>
 <body>
-
     <main>
-        <nav class="container-lg text-center mt-3 bg-light p-3">
-            <h2>App de Sorteo</h2>
-        </nav>
-
         <section class="container-xl">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-sm-9">
+                    <nav class="container-lg text-center mt-3 bg-light shadow-sm p-3 mb-5 bg-body rounded">
+                        <h2>App de Sorteo</h2>
+                    </nav>
+
                     <div class="card mt-5">
                         <div class="header">
                             <h5 class="text-center p-1">Ingresar la cantidad de números a sortear</h5>
@@ -26,15 +25,18 @@
                     </div>
                     <div class="div__alert">
                     </div>
-                    <div class="card mt-2">    
-                        <div class="body bg-light">
+                    <div class="card mt-2 shadow-sm p-1 mb-5 bg-body rounded">    
+                        <div class="body bg-light ">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="100">
+                                <input type="text" class="form-control" id="floatingInput">
                                 <label for="floatingInput">Ingrese Números</label>
                             </div>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-primary" type="button" id="btn__sortear">Sortear</button>
-                              </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="reset" class="btn btn-secondary" id="btn__limpiar"></button>
+                            </div>                               
                         </div>
                     </div>
                 </div>
@@ -47,5 +49,6 @@
     
 
     <script src="Js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
