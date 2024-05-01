@@ -17,15 +17,26 @@ window.show__Winner = (result__List)=>{
     let winner = document.querySelector(".div__result");
     winner.classList.add("mt-2","card","bg-body","rounded");
     let winner__Container = document.createElement("div");
+    
     winner__Container.classList.add("p-2");
     result__List.forEach(item=>{
         let div__Win = document.createElement("div");
         div__Win.classList.add("d-flex","justify-content-center","align-items-center","fw-bold","text-danger");
+        
         let text = document.createElement("h6");
         text.classList.add("ms-4","lh-1", "mb-0");
         text.innerText = "Es el número ganador";
+        let xmark = document.createElement("i");
+        xmark.classList.add("fa-solid","fa-xmark","mb-0", "ms-5","text-dark");
         div__Win.innerText = item;
         div__Win.appendChild(text);
+        div__Win.appendChild(xmark);
+
+        xmark.addEventListener('click', function(){
+            winner.classList.add("d-none");
+            //console.log('Se hizo click en el icono');
+        })
+
         winner__Container.appendChild(div__Win);
     });
     winner.appendChild(winner__Container);
@@ -33,7 +44,6 @@ window.show__Winner = (result__List)=>{
 
 window.register__List = []; /* Creo un array */
 window.winner__List = []; /* Creo un array */
-
 
 /* Capturo el Id del boton para realizar todo el proceso */
 const btnAux__sortear =  document.getElementById("btn__sortear");
@@ -59,6 +69,8 @@ btnAux__sortear.addEventListener('click', ()=>{
 
             let winner__List = {}/* Creo un objeto */
             winner__List.win = number__Win;
+
+            console.log(result__List);
 
             window.winner__List.push(winner__List);
             window.show__Winner(result__List);
