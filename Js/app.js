@@ -33,7 +33,7 @@ window.show__Winner = (result__List)=>{
         div__Win.appendChild(xmark);
 
         xmark.addEventListener('click', function(){
-            winner.classList.add("d-none");
+            winner__Container.classList.add("d-none");
             //console.log('Se hizo click en el icono');
         })
 
